@@ -13,12 +13,12 @@ app = FastAPI()
 def read_root():
     start = time.time()
 
-    service_1_req = requests.get('http://gateway-nginx:81').json()
+    service_1_req = requests.get('https://gateway-nginx:81', verify=False).json()
 
     # simulate network overhead
     # time.sleep(60 / 1000)
 
-    service_2_req = requests.get('http://gateway-nginx:82').json()
+    service_2_req = requests.get('https://gateway-nginx:82', verify=False).json()
 
     # simulate network overhead
     # time.sleep(60 / 1000)
