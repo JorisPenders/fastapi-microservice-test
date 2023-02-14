@@ -27,9 +27,17 @@ class WebsiteUser(HttpUser):
     # wait_time = between(5, 15)
 
     @task
-    def index(self):
+    def test_session(self):
         self.client.get(
-            '/',
+            '/session',
+            # data=sample_json,
+            verify=False
+        )
+
+    @task
+    def test_nosession(self):
+        self.client.get(
+            '/nosession',
             # data=sample_json,
             verify=False
         )
