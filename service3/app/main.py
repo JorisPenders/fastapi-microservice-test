@@ -16,12 +16,12 @@ def read_root():
     service_1_req = requests.get('http://gateway-nginx:81').json()
 
     # simulate network overhead
-    time.sleep(60 / 1000)
+    # time.sleep(60 / 1000)
 
     service_2_req = requests.get('http://gateway-nginx:82').json()
 
     # simulate network overhead
-    time.sleep(60 / 1000)
+    # time.sleep(60 / 1000)
 
     end = time.time()
     total_time = (end - start)
