@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  service1:
+    build: service1/.
+    volumes:
+      - "./service1/app/:/code/app"
+    # ports:
+    #   - "81:80"
+  service2:
+    build: service2/.
+    volumes:
+      - "./service2/app/:/code/app"
+    # ports:
+    #   - "82:80"
+  service3:
+    build: service3/.
+    volumes:
+      - "./service3/app/:/code/app"
+    ports:
+      - "80:80"
+
+  gateway-nginx:
+    image: nginx
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "81:81"
+      - "82:82"
+
+  locust:
+    image: locustio/locust
+    ports:
+     - "8089:8089"
+    volumes:
+      - ./locust:/mnt/locust
+    command: -f /mnt/locust/locustfile.py
