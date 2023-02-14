@@ -7,3 +7,6 @@
 
 # Results
 On local machine (no SSL, only http), response times of 11ms median
+
+# Architecture
+![](setup.png)
