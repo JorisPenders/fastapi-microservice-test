@@ -1,10 +1,11 @@
 
-FROM python:3.11-alpine
+FROM python:3.11
 
 WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
 
+RUN apt update && apt install postgresql -y
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app

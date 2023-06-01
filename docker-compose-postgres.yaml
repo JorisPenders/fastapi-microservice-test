@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  postgres:
+    image: aa8y/postgres-dataset:sportsdb
+    ports:
+    - "5432:5432"
+
