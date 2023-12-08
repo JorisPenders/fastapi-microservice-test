@@ -8,5 +8,8 @@
 # Results
 On local machine (no SSL, only http), response times of 11ms median
 
+# Build certs
+Before ruttning, you have to setup some certs. This can be done by running `ssl-creation.sh`
+
 # Architecture
 ![](setup.png)

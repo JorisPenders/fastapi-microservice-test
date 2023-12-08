@@ -67,18 +67,18 @@ def read_root():
     start = time.time()
 
     # loading stuff
-    time.sleep(150 / 1000)
+    # time.sleep(150 / 1000)
 
 
     service_1_req = s1.post('https://gateway-nginx:81', json=set_of_trx, verify=False).json()
 
     # simulate network overhead
-    time.sleep(60 / 1000)
+    # time.sleep(60 / 1000)
 
     service_2_req = s2.post('https://gateway-nginx:82', json=set_of_trx, verify=False).json()
 
     # simulate network overhead
-    time.sleep(60 / 1000)
+    # time.sleep(60 / 1000)
 
     end = time.time()
     total_time = (end - start)
@@ -99,17 +99,17 @@ def read_root():
     print('yo')
 
     # loading stuff
-    time.sleep(150 / 1000)
+    # time.sleep(150 / 1000)
 
     service_1_req = s1.post('https://gateway-nginx:81', json=set_of_trx, verify=False).json()
 
     # simulate network overhead
-    time.sleep(60 / 1000)
+    # time.sleep(60 / 1000)
 
     service_2_req = s2.post('https://gateway-nginx:82', json=set_of_trx, verify=False).json()
 
     # simulate network overhead
-    time.sleep(60 / 1000)
+    # time.sleep(60 / 1000)
 
     end = time.time()
     total_time = (end - start)
